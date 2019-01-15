@@ -32,6 +32,7 @@ function updates(string) {
 function empty() {
     collection = ['MI'];
     updateWindow();
+	updateString('MI');
 }
 
 function rule1(string) {
