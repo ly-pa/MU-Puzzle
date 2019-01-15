@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>MU Puzzle</title>
+	<script src="MU.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<h1>Starting with MI, get to MU</h1>
+
+	<p>For full details of the MU puzzle, see <a href="https://archive.org/details/GEBen_201404/page/n39">Godel, Escher, Bach pages 41-43</a>.</p>
+	<p><b>RULE I:</b> If you possess a string whose last letter is I, you can add on a U at the end.</p>
+	<p><b>RULE II:</b> Suppose you have Mx. Then you may add Mxx to your collection.</p>
+	<p><b>RULE III:</b> If III occurs in one of the strings in your collection, you may make a new string with U in place of III.</p>
+	<p><b>RULE IV:</b> If UU occurs inside one of your strings, you can drop it.</p>
+
+	<h2>Collection</h2>
+
+	Click string in collection to make the active string.
+
+	<p id=collectionDiv></p>
+
+	<div id=input>
+
+		<h4>Selected String</h4>
+		<input type="text" id="selectedString" value="">
+	<br>
+		<button type="button" onclick="rule1(selectedString.value);">Rule 1</button>
+		<button type="button" onclick="rule2(selectedString.value);">Rule 2</button>
+		<button type="button" onclick="rule3(selectedString.value);">Rule 3</button>
+		<button type="button" onclick="rule4(selectedString.value);">Rule 4</button>
+	<br>
+	</div>
+
+	<br>
+	<button type="button" onclick="empty();">Clear collection</button>
+	 <script>
+		updateWindow();
+		updateString('MI');
+	</script>
+</body>
+</html>
