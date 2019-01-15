@@ -1,7 +1,7 @@
-# MIU-Puzzle
-A tool for playing with the MIU puzzle from the book Godel, Escher, Bach.
+# MU-Puzzle
+A tool for playing with the MU puzzle from the book Godel, Escher, Bach.
 
-For full details of the MIU puzzle, see <a href="https://archive.org/details/GEBen_201404/page/n39">Godel, Escher, Bach pages 41-43</a>.
+For full details of the MU puzzle, see <a href="https://archive.org/details/GEBen_201404/page/n39">Godel, Escher, Bach pages 41-43</a>.
 
 You start with the string 'MI', you must get to 'MU' using the following 4 rules:
 
