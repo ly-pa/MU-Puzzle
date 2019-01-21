@@ -4,10 +4,6 @@ const collection = ['MI'];
 
 console.log('MI');
 
-function updateString(string) {
-    document.getElementById("selectedString").value = string;
-}
-
 function updateWindow() {
     let message = '';
     for (let i = 0; i < collection.length; i++) {
@@ -21,7 +17,7 @@ function updateWindow() {
 }
 
 function updates(string) {
-    updateString(string);
+    document.getElementById("selectedString").value = string;
     console.log(string);
     if (collection.includes(string) == false) { 
         collection.push(string);
@@ -30,9 +26,10 @@ function updates(string) {
 }
 
 function empty() {
-    collection = ['MI'];
+    collection.length = 0;
+    collection.push('MI');
     updateWindow();
-	updateString('MI');
+	updates('MI');
 }
 
 function rule1(string) {
@@ -70,7 +67,7 @@ function rule3(string) {
     if (/I{4,}/g.test(string)) {
         x = Number(prompt("Index of IIIs (index no.s start at 0): ",
             string.indexOf('III')));
-        if (string.indexOf(x) !== 'I') {
+        if (string.charAt(x) !== 'I') {
             return alert(`Index ${x} is not 'I'`)
         };
         string = (string.slice(0, x) + 'U' + string.slice(x + 3));
@@ -92,7 +89,7 @@ function rule4(string) {
     if (/U{3,}/g.test(string)) {
         x = Number(prompt("Index of UUs (index no.s start at 0): ",
                 string.indexOf('UU')));
-        if (string.indexOf(x) !== 'U') {
+        if (string.charAt(x) !== 'U') {
                 return alert(`Index ${x} is not 'U'`)
             };
         string = (string.slice(0, x) + string.slice(x + 2));
