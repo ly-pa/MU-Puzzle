@@ -1,6 +1,6 @@
 // MU problem
 
-let collection = ['MI'];
+const collection = ['MI'];
 
 console.log('MI');
 
@@ -67,13 +67,16 @@ function rule3(string) {
 
     If there is more than 3 IIIs in string,
     you can choose which ones to delete. */
-    if (string.match(/I/g).length >= 4) {
-        x = Number(prompt("Index of IIIs (starts at 0): ",
+    if (/I{4,}/g.test(string)) {
+        x = Number(prompt("Index of IIIs (index no.s start at 0): ",
             string.indexOf('III')));
+        if (string.indexOf(x) !== 'I') {
+            return alert(`Index ${x} is not 'I'`)
+        };
         string = (string.slice(0, x) + 'U' + string.slice(x + 3));
         updates(string);
         return string;
-    } else if (string.match(/I/g).length == 3) {
+    } else if (/I{3}/g.test(string)) {
         string = (string.slice(0, string.indexOf('III'))
             + 'U' + string.slice(string.indexOf('III') + 3));
         updates(string);
@@ -86,9 +89,18 @@ function rule3(string) {
 function rule4(string) {
 /*  RULE IV: If UU occurs inside one
     of your strings, you can drop it. */
-    if (string.includes('UU')) {
-        string = string.slice(0, string.indexOf('UU'))
-            + string.slice(string.indexOf('UU') + 2);
+    if (/U{3,}/g.test(string)) {
+        x = Number(prompt("Index of UUs (index no.s start at 0): ",
+                string.indexOf('UU')));
+        if (string.indexOf(x) !== 'U') {
+                return alert(`Index ${x} is not 'U'`)
+            };
+        string = (string.slice(0, x) + string.slice(x + 2));
+        updates(string);
+        return string;
+    } else if (/U{2}/g.test(string)) {
+        string = (string.slice(0, string.indexOf('UU'))
+                + string.slice(string.indexOf('UU') + 2));
         updates(string);
         return string;
     } else {
