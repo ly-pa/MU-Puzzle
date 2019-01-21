@@ -91,7 +91,7 @@ function rule4(string) {
                 string.indexOf('UU')));
         if (string.charAt(x) !== 'U') {
                 return alert(`Index ${x} is not 'U'`)
-            };
+        };
         string = (string.slice(0, x) + string.slice(x + 2));
         updates(string);
         return string;
