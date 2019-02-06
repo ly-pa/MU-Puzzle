@@ -90,6 +90,7 @@ input[type=text] { /* Text box */
 	border-style: outset;
 	border-radius: 16px;
 	background: #8EE4AF;
+	font-size: 120%;
 	padding: 10px;
 	font-weight: bold;
 	min-width: 50%;
