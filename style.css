@@ -94,4 +94,6 @@ input[type=text] { /* Text box */
 	font-weight: bold;
 	min-width: 50%;
 	margin-left: 0px;
+	word-break: break-all;
+	color: black;
 }
