@@ -1,6 +1,8 @@
 # MU-Puzzle
 A tool for playing with the MU puzzle from the book Godel, Escher, Bach.
 
+**Warning:** index.html requires MU.js to also be downloaded to the same directory in order to function properly. Downloading style.css for page styling is optional but recommended.
+
 For full details of the MU puzzle, see <a href="https://archive.org/details/GEBen_201404/page/n39">Godel, Escher, Bach pages 41-43</a>.
 
 You start with the string 'MI', you must get to 'MU' using the following 4 rules:
