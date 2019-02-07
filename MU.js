@@ -8,7 +8,7 @@ function updateWindow() {
     let message = '';
     for (let i = 0; i < collection.length; i++) {
         message +=
-            ('<a href="#" onclick="updateString(\''
+            ('<a href="#" onclick="updates(\''
             + String(collection[i]) + '\')" />'
             + String(collection[i]) + '</a>, ');
     };
